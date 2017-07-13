@@ -22,31 +22,30 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.LiveLink)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.GitLink)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.GitLinkText)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+
+@foreach (var item in Model)
+{
+    @*<script>alert("@item.LiveLink")</script>*@
+
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            <a href="@item.LiveLink">@Html.DisplayFor(modelItem => item.Name)</a>
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.LiveLink)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GitLink)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GitLinkText)
+            <a href="@item.GitLink">@Html.DisplayFor(modelItem => item.GitLinkText)</a>
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
