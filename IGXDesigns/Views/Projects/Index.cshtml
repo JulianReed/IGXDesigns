@@ -22,6 +22,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designer)
+        </th>
         @*<th>
             @Html.DisplayNameFor(model => model.LiveLink)
         </th>
@@ -31,6 +34,7 @@
         <th>
             @Html.DisplayNameFor(model => model.GitLinkText)
         </th>
+        
         <th></th>
     </tr>
 
@@ -42,6 +46,9 @@
     <tr>
         <td>
             <a href="@item.LiveLink">@Html.DisplayFor(modelItem => item.Name)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designer)
         </td>
 
         <td>

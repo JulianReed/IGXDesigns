@@ -14,7 +14,7 @@ namespace IGXDesigns.Models
         public string LiveLink { get; set; }
         public string GitLink { get; set; }
         public string GitLinkText { get; set; }
-
+        public string Designer { get; set; }
 
 
     }
